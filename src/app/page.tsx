@@ -32,24 +32,26 @@ export default function Home() {
         {/* Sections Grid */}
         <div className="sections-grid">
           <div className="section-item">
-            
-            <Image
-              src="/images/home_image3.jpg"
-              alt="Rejoindre RADAR"
-              width={400}
-              height={300}
-            />
+            <div className="image-container">
+              <Image
+                src="/images/home_image3.jpg"
+                alt="Rejoindre RADAR"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
             <h2>Comment rejoindre RADAR ?</h2>
           </div>
           
           <div className="section-item">
-            
-            <Image
-              src="/images/home_image2.jpg"
-              alt="Actions RADAR"
-              width={400}
-              height={300}
-            />
+            <div className="image-container">
+              <Image
+                src="/images/home_image2.jpg"
+                alt="Actions RADAR"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
             <h2>Actions entreprises par RADAR</h2>
           </div>
         </div>
@@ -62,6 +64,7 @@ export default function Home() {
               alt="Rejoindre RADAR"
               width={400}
               height={300}
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
           </div>
           <div className="partner-info">
