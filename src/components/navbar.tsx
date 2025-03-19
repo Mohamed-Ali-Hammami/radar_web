@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
-import { FaInfoCircle } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi'; // Importation de l'icône de recherche
 import styles from '../styles/navbar.module.css';
 import ContactUs from './contact_us';
