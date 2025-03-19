@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
 import { FaInfoCircle } from 'react-icons/fa';
+import { FiSearch } from 'react-icons/fi'; // Importation de l'icône de recherche
 import styles from '../styles/navbar.module.css';
 import ContactUs from './contact_us';
 
 const Navbar: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false); // Added missing state
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prevState) => !prevState);
@@ -17,7 +18,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav className={styles.navbar}>
-        {/* Left Section */}
+        {/* Section gauche */}
         <div className={styles['navbar-left']}>
           <button className={styles['menu-btn']} onClick={toggleSidebar}>
             ☰
@@ -31,20 +32,25 @@ const Navbar: React.FC = () => {
           </span>
         </div>
 
-        {/* Right Section */}
+        {/* Section droite */}
         <div className={styles['navbar-right']}>
-          <input
-            type="text"
-            placeholder="recherche"
-            className={styles['search-input']}
-          />
+          <div className={styles['search-container']}>
+            <input
+              type="text"
+              placeholder="Recherche"
+              className={styles['search-input']}
+            />
+            <button className={styles['search-btn']} onClick={() => console.log("Recherche activée")}>
+              <FiSearch />
+            </button>
+          </div>
           <button 
             className={styles['contact-btn']} 
             onClick={() => setIsContactOpen(true)}
           >
             Nous contacter
           </button>
-          <FaInfoCircle className={styles['info-icon']} />
+
         </div>
       </nav>
 
@@ -56,7 +62,7 @@ const Navbar: React.FC = () => {
         />
       )}
 
-      {/* Contact Modal */}
+      {/* Modal de contact */}
       {isContactOpen && (
         <ContactUs onClose={() => setIsContactOpen(false)} />
       )}

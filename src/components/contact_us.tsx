@@ -15,7 +15,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
   const [success, setSuccess] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Handle click outside
+  // Gérer le clic en dehors de la modal
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
@@ -28,7 +28,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log('Formulaire soumis :', formData);
     setSuccess(true);
     setTimeout(onClose, 2000);
   };
@@ -40,12 +40,12 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
           ×
         </button>
         
-        <h2 className={styles.h2}>Contact Us</h2>
+        <h2 className={styles.h2}>Nous contacter</h2>
         
         {success ? (
           <p className={styles.successMessage}>
-            Message sent successfully!<br/>
-            Redirecting...
+            Message envoyé avec succès !<br/>
+            Redirection en cours...
           </p>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
               />
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">Nom complet</label>
             </div>
             
             <div className={styles.inputGroup}>
@@ -68,7 +68,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
               />
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">Adresse e-mail</label>
             </div>
             
             <div className={styles.inputGroup}>
@@ -79,7 +79,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 required
               />
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">Sujet</label>
             </div>
             
             <div className={styles.inputGroup}>
@@ -94,7 +94,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onClose }) => {
             </div>
             
             <button type="submit" className={styles.submitButton}>
-              Send Message
+              Envoyer le message
             </button>
           </form>
         )}

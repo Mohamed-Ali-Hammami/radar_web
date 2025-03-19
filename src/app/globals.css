@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
   margin: 0;
@@ -10,8 +11,6 @@ body {
   background-color: #ffffff;
   color: #333333;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
 }
 
 .container {
@@ -36,6 +35,7 @@ body {
   line-height: 1.8;
 }
 
+/* Hero Section */
 .hero-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44,23 +44,24 @@ body {
   margin-bottom: 6rem;
 }
 
+/* Image styling remains as-is */
 .hero-image {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
-
 .hero-image img {
   width: 100%;
   height: auto;
   transition: transform 0.3s;
 }
-
 .hero-image:hover img {
   transform: scale(1.05);
 }
 
+
+/* Sections Grid */
 .sections-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -89,10 +90,11 @@ body {
 
 .section-item h2 {
   font-size: 1.5rem;
-  color: Black;
+  color: black;
   margin-top: 0.5rem;
 }
 
+/* Partners Section */
 .partners-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -116,7 +118,7 @@ body {
 
 .partner-info h2 {
   font-size: 2rem;
-  color: Black;
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -146,8 +148,9 @@ body {
   margin: 0 auto 1rem;
 }
 
+/* Call-to-Action Button */
 .cta-button {
-  background: linear-gradient(90deg,rgb(255, 75, 201) 0%,rgba(225, 0, 255, 0.32) 100%);
+  background: linear-gradient(90deg, rgb(255, 75, 201) 0%, rgba(225, 0, 255, 0.32) 100%);
   color: white;
   width: 300px;
   padding: 1rem 2.5rem;
@@ -165,12 +168,10 @@ body {
   box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
 }
 
+/* Global Media Queries */
 @media (max-width: 1024px) {
   .hero-section,
-  .partners-section {
-    grid-template-columns: 1fr;
-  }
-  
+  .partners-section,
   .sections-grid {
     grid-template-columns: 1fr;
   }
@@ -180,8 +181,46 @@ body {
   .container {
     padding: 0 1rem;
   }
-  
   .title {
     font-size: 2.5rem;
+  }
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .hero-text {
+    padding: 0 1rem;
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    max-width:500px;
+    padding: 0 1rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 250px;
+  }
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

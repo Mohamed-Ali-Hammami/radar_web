@@ -1,3 +1,4 @@
+
 .sidebarContainer {
   --primary: #ff6b6b;
   --secondary: #ff4757;
@@ -30,7 +31,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+  overflow-y: auto;
   
   /* Firefox scrollbar styling */
   scrollbar-width: thin;
@@ -51,7 +52,7 @@
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #ff69b4; /* lightning pink */
+  background-color: #ff69b4;
   border-radius: 10px;
 }
 
@@ -100,7 +101,7 @@
   padding: 1rem 0;
   position: relative;
   transition: all 0.3s;
-  cursor: pointer; /* Pointer cursor for hovered buttons */
+  cursor: pointer;
 }
 
 .listItem:hover {
@@ -125,10 +126,8 @@
   opacity: 1;
 }
 
-
-/* Updated contactIcons styling */
 .contactIcons {
-  margin-top: auto;  /* Pushes the icons to the bottom of the sidebar */
+  margin-top: auto;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
@@ -142,7 +141,7 @@
   transition: all 0.3s;
   padding: 0.5rem;
   border-radius: 50%;
-  cursor: pointer; /* Pointer cursor for hovered icons */
+  cursor: pointer;
 }
 
 .contactIcons a:hover {
@@ -151,13 +150,40 @@
   box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
 }
 
-@media (max-width: 600px) {
-  .sidebar {
-    width: 80%;
-    border-radius: 0 20px 20px 0;
-  }
+/* Sidebar Media Queries */
+@media (max-width: 768px) {
   
+  .sidebar {
+    width: 85%;
+    padding: 1.5rem 1rem;
+  }
   .sidebar h2 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+  }
+  .listItem {
+    font-size: 0.95rem;
+    padding: 0.85rem 0;
+  }
+  .contactIcons a {
+    font-size: 1.4rem;
+    padding: 0.45rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 70%;
+    padding: 1rem;
+  }
+  .sidebar h2 {
+    font-size: 1.1rem;
+  }
+  .listItem {
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+  }
+  .contactIcons a {
+    font-size: 1.1rem;
+    padding: 0.4rem;
   }
 }

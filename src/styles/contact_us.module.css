@@ -3,10 +3,10 @@
     --secondary: #ff6b6b;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-    
+
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #00c6ff 0%, #ff6b6b 100%);
+    background:;
     backdrop-filter: blur(5px);
     display: grid;
     place-items: center;
@@ -14,7 +14,7 @@
   }
   
   .formWrapper {
-    background: var(--glass-bg);
+    background:  linear-gradient(135deg, #00c6ff 0%, #ff6b6b 100%);
     border: 1px solid var(--glass-border);
     border-radius: 25px;
     padding: 2rem;
@@ -154,13 +154,51 @@
     margin-right: 0.5rem;
   }
   
-  @media (max-width: 600px) {
+  /* Media Queries for Contactus */
+  
+  /* For screens 768px and below */
+  @media (max-width: 768px) {
+    .closeButton {
+        top:0.5rem;
+        }
+        
+        
     .formWrapper {
       padding: 1.5rem;
-      border-radius: 15px;
+      max-width: 90%;
     }
-    
     .h2 {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
+    }
+    .inputGroup input,
+    .inputGroup textarea {
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    .submitButton {
+      padding: 12px 20px;
+      font-size: 0.9rem;
     }
   }
+  
+  /* For screens 480px and below */
+  @media (max-width: 480px) {
+    .closeButton {
+        top:0.5rem;
+        }
+        
+
+    .h2 {
+      font-size: 1.5rem;
+    }
+    .inputGroup input,
+    .inputGroup textarea {
+      padding: 8px 0;
+      font-size: 0.8rem;
+    }
+    .submitButton {
+      padding: 10px 15px;
+      font-size: 0.8rem;
+    }
+  }
+  
