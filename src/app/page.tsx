@@ -11,8 +11,11 @@ export default function Home() {
           <div className="hero-text">
             <h1 className="title">Ensemble, pour une solidarité et un bien-être partagé</h1>
             <p className="description">
-              Le Réseau d&apos;Acteurs pour le Développement d&apos;Action Rassembleuse (RADAR) met de l&apos;avant la collaboration entre ses acteurs.<br/>
-              Dimension avec sa capacité de trouver des solutions aux enjeux du développement des communautés, la flexibilité avec son adaptation au besoin de la ville de Trois-Rivières et l&apos;inclusivité des divers partenariats qui répondent aux besoins des Trifluviennes sur divers plans (santé, sécurité, itinérance, etc.).
+            Le Réseau d&apos;Acteurs pour le Développement d&apos;Action Rassembleuse (RADAR) met de l&apos;avant la collaboration entre ses acteurs, l&apos;innovation avec sa capacité de trouver des solutions aux enjeux du développement des communautés, la flexibilité avec son adaptation au besoin de la ville de Trois-Rivières et l&apos;inclusivité des divers partenariats qui répondent aux besoins des Trifluvien.ne.s sur divers plans (santé, sécurité, itinérance, etc.)..
+            </p>
+            <br/>
+            <p className="description">
+            Et vous ? Voulez-vous nous aider à améliorer la qualité de vie des Trifluvien.ne.s ? Rejoignez-nous !
             </p>
             <div className="cta-buttons">
               <a href="#" className="cta-button">
