@@ -9,8 +9,6 @@
   inset: 0;
   backdrop-filter: blur(5px);
   display: none;
-  justify-content: flex-start;
-  align-items: center;
   z-index: 1000;
 }
 
@@ -75,7 +73,7 @@
 
 .sidebar h2 {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   color: white;
   padding-bottom: 0.5rem;
@@ -102,7 +100,10 @@
   position: relative;
   transition: all 0.3s;
   cursor: pointer;
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Add some padding for spacing */
 }
+
 
 .listItem:hover {
   transform: translateX(10px);
