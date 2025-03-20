@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/sidebar.module.css';
-import { FaPhone, FaEnvelope, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaLinkedin, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -67,13 +67,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <FaEnvelope />
           </a>
           <a
-            href="https://www.youtube.com/channel/example"
+            href="https://www.linkedin.com/in/example"
             target="_blank"
             rel="noopener noreferrer"
-            title="Visit our YouTube channel"
+            title="Visit our LinkedIn profile"
           >
-            <FaYoutube />
+            <FaLinkedin />
           </a>
+
           <a
             href="https://www.instagram.com/example"
             target="_blank"
